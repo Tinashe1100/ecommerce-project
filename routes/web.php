@@ -8,10 +8,12 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    $cart = session()->get('cart');
-    return view('welcome', ['cart' => $cart]);
+    return view('welcome');
 })->name('home');
 
+Route::get('cart', function () {
+    return view('pages.cart');
+})->name('my-cart');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -38,7 +40,7 @@ Route::controller(ProductController::class)->group(function () {
     Route::get('add-product', 'create')->name('create.product')->middleware('auth');
     Route::post('add-product', 'store')->name('create-product')->middleware('auth');
     Route::get('product/{product}', 'show')->name('product');
-    Route::post('cart/{product}', 'cart')->name('cart');
+    Route::post('/cart/{product}', 'cart')->name('cart');
     Route::get('edit-product/{product}', 'edit')->name('product.edit')->middleware('auth');
     Route::post('update-product/{product}', 'update')->name('edit.product')->middleware('auth');
     Route::get('delete-product/{product}', 'destroy')->name('product.drop')->middleware('auth');

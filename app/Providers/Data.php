@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App\Models\AllCategory;
 use App\Models\Product;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class Data extends ServiceProvider
@@ -37,8 +39,8 @@ class Data extends ServiceProvider
         });
 
         // share second set of data - cart data
-        view()->composer('*', function ($view) use ($cart) {
-            $view->with('cart', $cart);
+        View::composer('*', function ($view) {
+            $view->with('cart', Session::get('cart', []));
         });
     }
 }

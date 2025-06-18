@@ -83,27 +83,24 @@ class ProductController extends Controller
      */
     public function cart(Request $request, Product $product)
     {
-
-        // get product ID / key
-        $productId = $product->id;
-        // create a session
-        $cart = request()->session()->get('cart', []);
-        // put items into newly created cart
-        $cart[$productId] = [
-            'id' => $product['id'],
-            'name' => $product['name'],
-            'category' => $product['category'],
-            'price' => $product['price'],
-            'details' => $product['details'],
-            'image' => $product['image'],
-
+        // initialize cart
+        $cart = session()->get('cart', []);
+        // inset data into session
+        $cart[$product->id] = [
+            'name' => $product->name,
+            'details' => $product->details,
+            'category' => $product->category,
+            'price' => $product->price,
+            'image' => $product->image,
+            'seller_phone' => $product->seller_phone,
         ];
-        // store cart data
-        request()->session()->put('cart', $cart);
 
-        // dd($cart);
+        // commit data into session
+        session()->put('cart', $cart);
 
-        return redirect('/');
+        if (session()->has('cart')) {
+            return redirect()->route('my-cart');
+        }
     }
 
 

@@ -29,6 +29,15 @@
 
             <li><a href="{{ route('profile.edit') }}"><i class="zmdi zmdi-account"></i><span>Profile</span></a></li>
 
+            <li>
+                <div class="user-info">
+                    {{-- <a class="image" href="profile.html"><img src="assets/images/profile_av.jpg" alt="User"></a> --}}
+                    <div class="detail">
+                        <a href="{{ route('home') }}"><span class="m-l-10">Go to main site</span></a>
+                    </div>
+                </div>
+            </li>
+
 
         </ul>
     </div>

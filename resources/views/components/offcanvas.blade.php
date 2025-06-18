@@ -1,6 +1,3 @@
-{{-- @props(['cart']) --}}
-
-
 <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart">
     <div class="offcanvas-header justify-content-center">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -15,25 +12,15 @@
 
                 @if ($cart !== null)
                     @foreach ($cart as $cart)
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
-                            <div>
-                                <h6 class="my-0">{{ $cart['name'] }}</h6>
-                                <div class="tw-flex tw-justify-between justify-items-center tw-items-center">
-                                    <div class="row">
-                                        <small class="col-2 text-truncate">
-                                            {{ $cart['details'] }}
-                                        </small>
-                                        <span class="col-8 text-body-secondary">&dollar;{{ $cart['price'] }}.00</span>
-                                    </div>
-                                </div>
-                            </div>
-
+                        <li class="tw-flex tw-space-y-2 tw-justify-between">
+                            <h6 class="tw-font-medium ">{{ $cart['name'] }}</h6>
+                            <p class="tw-text-end  col-8 text-body-secondary">&dollar;{{ $cart['price'] }}.00</p>
                         </li>
                     @endforeach
                 @endif
-
+                <a href="{{ route('my-cart') }}" class="btn btn-primary btn-lg">View Cart</a>
             </ul>
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+
         </div>
     </div>
 </div>

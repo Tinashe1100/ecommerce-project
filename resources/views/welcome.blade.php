@@ -3,11 +3,9 @@
         <div class="preloader">
         </div>
     </div> --}}
-    {{-- @php
-        dd($cart);
-    @endphp --}}
+
     {{-- offcanvas cart --}}
-    <x-offcanvas :cart="$cart" />
+    <x-offcanvas />
 
     <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasSearch" aria-labelledby="Search">
         <div class="offcanvas-header justify-content-center">

@@ -62,10 +62,11 @@
 
 
                                 <div class="tw-flex tw-space-x-2 tw-my-4">
-                                    <form action="{{ route('cart', [$product->id]) }}" method="post">
+                                    <form action="{{ route('cart', $product->id) }}" method="post">
                                         @csrf
                                         <button class="btn btn-dark" type="submit">Add to cart</button>
                                     </form>
+
 
                                     <a href="tel:+{{ $product->phone_number }}" class="btn btn-primary">Contact
                                         seller</a>
