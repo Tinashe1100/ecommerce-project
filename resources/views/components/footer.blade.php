@@ -3,7 +3,7 @@
 
         <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="footer-menu">
-                <img src="images/logo.png" alt="logo">
+                <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
                 <div class="social-links mt-5">
                     <ul class="d-flex list-unstyled gap-2">
                         <li>
@@ -56,78 +56,25 @@
             </div>
         </div>
 
+
+
         <div class="col-md-2 col-sm-6">
             <div class="footer-menu">
-                <h5 class="widget-title">Ultras</h5>
+                <h5 class="widget-title">Quick Links</h5>
                 <ul class="menu-list list-unstyled">
                     <li class="menu-item">
-                        <a href="#" class="nav-link">About us</a>
+                        <a href="#" class="nav-link">Browse products</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#" class="nav-link">Conditions </a>
+                        <a href="#" class="nav-link">Register as seller</a>
                     </li>
                     <li class="menu-item">
-                        <a href="#" class="nav-link">Our Journals</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">Careers</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">Affiliate Programme</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">Ultras Press</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-6">
-            <div class="footer-menu">
-                <h5 class="widget-title">Customer Service</h5>
-                <ul class="menu-list list-unstyled">
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">FAQ</a>
+                        <a href="#" class="nav-link">Categories</a>
                     </li>
                     <li class="menu-item">
                         <a href="#" class="nav-link">Contact</a>
                     </li>
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">Privacy Policy</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">Returns & Refunds</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">Cookie Guidelines</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">Delivery Information</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-6">
-            <div class="footer-menu">
-                <h5 class="widget-title">Customer Service</h5>
-                <ul class="menu-list list-unstyled">
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">FAQ</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">Contact</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">Privacy Policy</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">Returns & Refunds</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">Cookie Guidelines</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="nav-link">Delivery Information</a>
-                    </li>
+
                 </ul>
             </div>
         </div>

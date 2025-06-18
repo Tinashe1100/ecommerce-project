@@ -81,15 +81,14 @@ class ProductController extends Controller
     /**
      * add to cart
      */
-    public function cart(Product $product)
+    public function cart(Request $request, Product $product)
     {
-        // dd(request()->input('quantity'));
+
         // get product ID / key
         $productId = $product->id;
-
-        // get session
+        // create a session
         $cart = request()->session()->get('cart', []);
-        // dd($cart);
+        // put items into newly created cart
         $cart[$productId] = [
             'id' => $product['id'],
             'name' => $product['name'],
@@ -99,8 +98,10 @@ class ProductController extends Controller
             'image' => $product['image'],
 
         ];
-
+        // store cart data
         request()->session()->put('cart', $cart);
+
+        // dd($cart);
 
         return redirect('/');
     }

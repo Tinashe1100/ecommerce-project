@@ -51,21 +51,24 @@
                                     <h2 class="h5">Current Price: &dollar;{{ $product->price }}.00</h2>
                                     <hr class="my-4">
                                     <p>{{ $product->details }}</p>
-
+                                    <br>
+                                    <span>
+                                        <h1>Seller Details</h1>
+                                        <p>Seller name: {{ $product->seller_name }}</p>
+                                        <p>Phone number: {{ $product->seller_phone }}</p>
+                                    </span>
                                 </div>
 
 
 
-                                <div class="tw-flex tw-my-4">
+                                <div class="tw-flex tw-space-x-2 tw-my-4">
                                     <form action="{{ route('cart', [$product->id]) }}" method="post">
                                         @csrf
-                                        <x-primary-button
-                                            class="tw-ms-3 btn btn-primary tw-px-4 tw-py-2 tw-font-medium me-2">
-                                            {{ __('Add to cart') }}
-                                        </x-primary-button>
+                                        <button class="btn btn-dark" type="submit">Add to cart</button>
                                     </form>
 
-                                    <a href="tel:+{{ $product->phone_number }}" class="btn btn-dark">Contact seller</a>
+                                    <a href="tel:+{{ $product->phone_number }}" class="btn btn-primary">Contact
+                                        seller</a>
 
                                 </div>
                             </div>

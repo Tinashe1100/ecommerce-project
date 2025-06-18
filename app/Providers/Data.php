@@ -24,6 +24,7 @@ class Data extends ServiceProvider
         $categories = AllCategory::all();
         $products = Product::all();
         $cart = session()->get('cart');
+        // dd($cart);
 
         // share first set of data - categories data
         view()->composer('*', function ($view) use ($categories) {

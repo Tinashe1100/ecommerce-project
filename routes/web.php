@@ -8,11 +8,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    $cart = request()->session()->get('cart');
-    return view('welcome', [
-        'cart' => $cart,
-    ]);
+    $cart = session()->get('cart');
+    return view('welcome', ['cart' => $cart]);
 })->name('home');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

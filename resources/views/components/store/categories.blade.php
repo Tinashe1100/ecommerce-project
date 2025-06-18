@@ -24,7 +24,7 @@
 
                     @foreach ($categories as $category)
                         <a href="index.html" class="nav-link category-item swiper-slide">
-                            <img src="images/icon-vegetables-broccoli.png" alt="Category Thumbnail">
+
                             <h3 class="category-title">{{ $category->category_name }}</h3>
                         </a>
                     @endforeach

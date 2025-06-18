@@ -16,8 +16,7 @@
                                         <div class="content-wrapper col-md-7">
                                             <div class="categories my-3">100% natural</div>
                                             <h3 class="display-4">Fresh Smoothie & Summer Juice</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim
-                                                massa diam elementum.</p>
+
                                             @if (Auth::user())
                                                 @if (Auth::user()->user_type === 'seller')
                                                     <a href="{{ route('create-product') }}"

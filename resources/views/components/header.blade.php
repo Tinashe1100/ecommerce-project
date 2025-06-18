@@ -5,7 +5,7 @@
             <div class="col-sm-4 col-lg-3 text-center text-sm-start">
                 <div class="main-logo">
                     <a href="{{ route('home') }}">
-                        <img src="{{ asset('assets/images/logo.png') }}" alt="logo" class="img-fluid">
+                        <img src="{{ asset('assets/images/logo.png') }}" alt="logo" class="img-fluid" width="300">
                     </a>
                 </div>
             </div>
@@ -118,7 +118,7 @@
                                 @if (Auth::user())
                                     @if (Auth::user()->user_type === 'seller')
                                         <li class="nav-item active">
-                                            <a href="#women" class="nav-link">My Ads</a>
+                                            <a href="{{ route('create.product') }}" class="nav-link">My Ads</a>
                                         </li>
                                         <li class="nav-item active">
                                             <a href="{{ route('create.product') }}" class="nav-link">Start Selling</a>

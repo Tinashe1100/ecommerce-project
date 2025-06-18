@@ -1,11 +1,14 @@
 <x-layout>
-    <div class="preloader-wrapper">
+    {{-- <div class="preloader-wrapper">
         <div class="preloader">
         </div>
-    </div>
+    </div> --}}
+    {{-- @php
+        dd($cart);
+    @endphp --}}
+    {{-- offcanvas cart --}}
+    <x-offcanvas :cart="$cart" />
 
-    {{-- offcanvas drawer --}}
-    @include('components.offcanvas')
     <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasSearch" aria-labelledby="Search">
         <div class="offcanvas-header justify-content-center">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -48,10 +51,7 @@
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                     <a href="#" class="nav-link text-uppercase fs-6 active" id="nav-all-tab"
                                         data-bs-toggle="tab" data-bs-target="#nav-all">All</a>
-                                    <a href="#" class="nav-link text-uppercase fs-6" id="nav-fruits-tab"
-                                        data-bs-toggle="tab" data-bs-target="#nav-fruits">Fruits & Veges</a>
-                                    <a href="#" class="nav-link text-uppercase fs-6" id="nav-juices-tab"
-                                        data-bs-toggle="tab" data-bs-target="#nav-juices">Juices</a>
+
                                 </div>
                             </nav>
                         </div>
@@ -103,105 +103,7 @@
 
 
 
-    <section class="py-5">
-        @include('components.store.highlights')
-    </section>
 
-    <section class="py-5 overflow-hidden">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="section-header d-flex justify-content-between">
-
-                        <h2 class="section-title">Most popular products</h2>
-
-                        <div class="d-flex align-items-center">
-                            <a href="#" class="btn-link text-decoration-none">View All Categories →</a>
-                            <div class="swiper-buttons">
-                                <button class="swiper-prev products-carousel-prev btn btn-primary">❮</button>
-                                <button class="swiper-next products-carousel-next btn btn-primary">❯</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="products-carousel swiper">
-                        <div class="swiper-wrapper">
-                            @include('components.store.product-item-slider')
-
-                        </div>
-                    </div>
-                    <!-- / products-carousel -->
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="py-5">
-        {{-- registration cta --}}
-        @include('components.store.registrationCTA')
-    </section>
-
-
-    <section class="py-5 overflow-hidden">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="section-header d-flex justify-content-between">
-
-                        <h2 class="section-title">Just arrived</h2>
-
-                        <div class="d-flex align-items-center">
-                            <a href="#" class="btn-link text-decoration-none">View All Categories →</a>
-                            <div class="swiper-buttons">
-                                <button class="swiper-prev products-carousel-prev btn btn-primary">❮</button>
-                                <button class="swiper-next products-carousel-next btn btn-primary">❯</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="products-carousel swiper">
-                        <div class="swiper-wrapper">
-                            @include('components.store.product-item-slider')
-
-                        </div>
-                    </div>
-                    <!-- / products-carousel -->
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="latest-blog" class="py-5">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="section-header d-flex align-items-center justify-content-between my-5">
-                    <h2 class="section-title">Our Recent Blog</h2>
-                    <div class="btn-wrap align-right">
-                        <a href="#" class="d-flex align-items-center nav-link">Read All Articles <svg
-                                width="24" height="24">
-                                <use xlink:href="#arrow-right"></use>
-                            </svg></a>
-                    </div>
-                </div>
-            </div>
-            @include('components.store.blog')
-        </div>
-    </section>
 
     <section class="py-5 my-5">
         <div class="container-fluid">
@@ -230,13 +132,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 copyright">
-                    <p>© 2023 Foodmart. All rights reserved.</p>
+                    <p>Adventist Online Marketplace. All rights reserved.</p>
                 </div>
-                <div class="col-md-6 credit-link text-start text-md-end">
-                    <p>Free HTML Template by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distributed by
-                        <a href="https://themewagon">ThemeWagon</a>
-                    </p>
-                </div>
+
             </div>
         </div>
 

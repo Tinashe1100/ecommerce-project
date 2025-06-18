@@ -53,7 +53,8 @@ class RegisteredCategoryController extends Controller
             // ];
         }
 
-        return redirect('categories');
+
+        return redirect('registered-categories');
     }
 
     /**
