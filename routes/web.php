@@ -44,6 +44,9 @@ Route::controller(ProductController::class)->group(function () {
     Route::get('edit-product/{product}', 'edit')->name('product.edit')->middleware('auth');
     Route::post('update-product/{product}', 'update')->name('edit.product')->middleware('auth');
     Route::get('delete-product/{product}', 'destroy')->name('product.drop')->middleware('auth');
+    Route::get('browse-products', 'products')->name('browse');
+    Route::get('products/', 'products');
+    Route::get('search/', 'products');
 });
 
 Route::controller(RegisteredCategoryController::class)->group(function () {

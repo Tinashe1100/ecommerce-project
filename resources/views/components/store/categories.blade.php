@@ -23,8 +23,8 @@
                 <div class="swiper-wrapper">
 
                     @foreach ($categories as $category)
-                        <a href="index.html" class="nav-link category-item swiper-slide">
-
+                        <a href="/products/?category={{ $category->category_name }}"
+                            class="nav-link category-item swiper-slide">
                             <h3 class="category-title">{{ $category->category_name }}</h3>
                         </a>
                     @endforeach

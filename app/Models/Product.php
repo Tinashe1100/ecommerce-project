@@ -18,4 +18,18 @@ class Product extends Model
     {
         return $this->belongsTo(AllCategory::find());
     }
+
+    public function scopeFilter($query, array $filters)
+    {
+
+        if ($filters['category'] ?? false) {
+            if ($filters['category'] ?? false) {
+                $query->where('category', 'like', '%' . request('category') . '%');
+            }
+        }
+
+        if ($filters['search'] ?? false) {
+            $query->where('name', 'like', '%' . request('search') . '%');
+        }
+    }
 }

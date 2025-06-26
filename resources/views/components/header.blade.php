@@ -12,26 +12,23 @@
 
             <div class="col-sm-6 offset-sm-2 offset-md-0 col-lg-5 d-none d-lg-block">
                 <div class="search-bar row bg-light p-2 my-2 rounded-4">
-                    <div class="col-md-4 d-none d-md-block">
-                        <select class="form-select border-0 bg-transparent">
-                            <option>All Categories</option>
-                            @foreach ($categories as $category)
-                                <option>{{ $category->category_name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="col-11 col-md-7">
-                        <form id="search-form" class="text-center" action="index.html" method="post">
-                            <input type="text" class="form-control border-0 bg-transparent"
+
+                    <form class=" col-md-10">
+                        <div id="search-form" class="text-center" action="" method="get">
+
+                            <input type="text" name="search" class="form-control border-0 bg-transparent"
                                 placeholder="What are you looking for?" />
-                        </form>
-                    </div>
-                    <div class="col-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z" />
-                        </svg>
-                    </div>
+                        </div>
+
+
+                        <button type="submit"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z" />
+                            </svg></button>
+
+                    </form>
+
                 </div>
             </div>
 
@@ -120,15 +117,13 @@
                                         <li class="nav-item active">
                                             <a href="{{ route('create.product') }}" class="nav-link">My Ads</a>
                                         </li>
-                                        <li class="nav-item active">
-                                            <a href="{{ route('create.product') }}" class="nav-link">Start Selling</a>
-                                        </li>
+
                                         <li class="nav-item active">
                                             <a href="{{ route('registered.categories') }}" class="nav-link">My
                                                 Categories</a>
                                         </li>
                                         <li class="nav-item active">
-                                            <a href="#women" class="nav-link">Browse Products</a>
+                                            <a href="{{ route('browse') }}" class="nav-link">Browse Products</a>
                                         </li>
                                         <li class="nav-item active">
                                             <a href="{{ route('logout') }}" class="nav-link">Logout</a>

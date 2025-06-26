@@ -161,4 +161,15 @@ class ProductController extends Controller
             return redirect('dashboard');
         }
     }
+
+    public function products(Request $request)
+    {
+        return view('pages.products');
+    }
+
+    public function filters(Request $request, Product $product)
+    {
+
+        return view('pages.filtered');
+    }
 }

@@ -24,8 +24,16 @@ class Data extends ServiceProvider
     public function boot(): void
     {
         $categories = AllCategory::all();
-        $products = Product::all();
+
+        $products =   $products = Product::latest()
+            // ->where('status', true)
+            ->filter(request(['category', 'search',]))
+            ->select('*')
+            ->get();
+
         $cart = session()->get('cart');
+
+
         // dd($cart);
 
         // share first set of data - categories data
